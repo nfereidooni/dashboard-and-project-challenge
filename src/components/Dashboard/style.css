@@ -60,3 +60,54 @@ a {
     font-weight: 400;
     font-size: 0.8rem;
 }
+
+
+/* Dashboard */
+
+.dashboardCard {
+    border: 2px solid #d3d2d2;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.cardTitle {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.listGroup {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.tabsGroup ul > li > a {
+    background-color: gray;
+    color: white;
+}
+
+.cardTab {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.nav-tabs, .nav-item.show, .nav-link, .nav-tabs, .nav-link.active {
+    color: #27ae60;
+    background-color: #fff;
+    border-color: none;
+    font-size: 0.8rem;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs, .nav-link:hover{
+    color: gray;
+}
+
+.noResult {
+    margin: 20px;
+}
