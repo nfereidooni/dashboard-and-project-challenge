@@ -1,6 +1,6 @@
-import { React } from "react";
+import { React, useState } from "react";
 import "./style.css";
-import { Container } from "react-bootstrap";
+import { Container, CloseButton, Row, Col } from "react-bootstrap";
 
 const CODE_DATA = [
 
@@ -24,15 +24,39 @@ const CODE_DATA = [
 
 function Dashboard() {
 
+  const [hide, setHide] = useState(true);
+
   return (
     <Container>
-        <div className="gettingStarted">
-            <p>Feel Free To Explore Or Use These Suggestions To Get Started!</p>
-            <div>Join Your First Lab</div>    
-            <div>Join Your First Challenge</div>   
-            <div>JSet Up Your Profile</div>   
-            <p>Questions? check out our Help Center or send us a message in the chat box found on the bottom right of your screen.</p>
-        </div>
+        {hide && <div className="gettingStarted" id="gettingStarted">
+            <CloseButton onClick={() => setHide(false)} aria-label="Hide" />
+            <h1 className="gettingStarted-h1 text-center">Getting Started</h1>
+            <h2 className="gettingStarted-h2 text-center">Feel Free To Explore Or Use These Suggestions To Get Started!</h2>
+            <Row>
+              <Col className="gettingStartedCol" sm={12} md={4}>
+                <div className="gettingStartedDiv text-center">
+                  <i class="gettingStartedIcon fas fa-flask fa-2x"></i>
+                  <h3 className="gettingStarted-h3">Join your first lab</h3>
+                  <p className="gettingStarted-p">Find a community that shares your interests. Collaborate together to learn and solve challenges.</p>
+                </div>
+              </Col>
+              <Col className="gettingStartedCol" sm={12} md={4}>   
+                <div className="gettingStartedDiv text-center">
+                  <i class="gettingStartedIcon fas fa-puzzle-piece fa-2x"></i>
+                  <h3 className="gettingStarted-h3">Join Your First Challenge</h3>
+                  <p className="gettingStarted-p">Build skills and Demonstrate your problem solving abilities by completing challenges.</p>
+                </div>
+              </Col>
+              <Col className="gettingStartedCol" sm={12} md={4}>
+                <div className="gettingStartedDiv text-center">
+                  <i class="gettingStartedIcon fas fa-user-circle fa-2x"></i>
+                  <h3 className="gettingStarted-h3">Set Up Your Profile</h3>
+                  <p className="gettingStarted-p">Add a profile photo and fill out details so people can get to know you and invite you to challenges.</p>
+                </div>
+              </Col>
+            </Row>
+            <p className="gettingStarted-p text-center">Questions? check out our <a href="https://intercom.help/preprme/en" target="_blank" rel="noreferrer">Help Center</a> or send us a message in the chat box found on the bottom right of your screen.</p>
+        </div>}
     </Container>
   );
 }
