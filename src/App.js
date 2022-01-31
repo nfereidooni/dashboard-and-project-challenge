@@ -14,7 +14,7 @@ function App() {
           <Header />
           <Routes>
             <Route exact path="/" element={<Dashboard />} />
-            <Route exact path="/" element={<NewProject />} />
+            <Route exact path="/newproject" element={<NewProject />} />
           </Routes>
           <Footer />
     </Router>

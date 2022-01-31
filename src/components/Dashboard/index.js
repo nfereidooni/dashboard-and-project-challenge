@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import "./style.css";
-import { Container, CloseButton, Row, Col, Tabs, Tab, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Container, CloseButton, Row, Col, Button, Tabs, Tab, ListGroup, ListGroupItem } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const PROJECT_DATA = [
 
@@ -22,9 +23,11 @@ const PROJECT_DATA = [
 }
 ]
 
-function Dashboard() {
+function Dashboard(props) {
 
   const [hide, setHide] = useState(true);
+
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -64,7 +67,13 @@ function Dashboard() {
         {/* Dashboard */}
 
         <div className="dashboard">
-            <h1 className="gettingStarted-h1 text-center mt-5 mb-3">Dashboard</h1>
+          <h1 className="gettingStarted-h1 text-center mt-5 mb-3">Dashboard</h1>
+
+          {/* New Project Button */}
+          <div className="d-flex justify-content-end mb-3">
+            <Button className="newProjectBtn" variant="success" onClick={() => navigate("/newproject")}>Create a New Project</Button>
+          </div>
+
           <Row>
 
             {/* Projects */}
@@ -140,6 +149,33 @@ function Dashboard() {
               </div>
             </Col>
           </Row>
+          <Row>
+
+            {/* Inbox */}
+
+            <Col sm={12} md={4}>
+                <div className="dashboardCard">
+                    <h1 className="cardTitle text-center">Labs</h1>
+                    <Tabs defaultActiveKey="inbox"  className="tabsGroup mb-3">
+                      <Tab className="cardTab" eventKey="inbox" title="Inbox">
+                        <ListGroup className="listGroup list-group-flush">
+                          <ListGroupItem>Cras justo odio</ListGroupItem>
+                          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
+                          <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                        </ListGroup>
+                      </Tab>
+                      <Tab className="cardTab" eventKey="friendrequests" title="Friend Requests">
+                        <ListGroup className="listGroup list-group-flush">
+                          <p className="noResult text-center">No Friend Requests</p>
+                        </ListGroup>
+                      </Tab>
+                    </Tabs>
+                </div>
+              </Col>
+
+
+          </Row>
+
         </div>
 
 
