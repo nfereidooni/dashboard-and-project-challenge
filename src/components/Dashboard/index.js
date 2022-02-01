@@ -3,26 +3,6 @@ import "./style.css";
 import { Container, CloseButton, Row, Col, Button, Tabs, Tab, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-const PROJECT_DATA = [
-
-  {title: "CodeByNiki: Web Page Creation",
-  link: "https://preprlabs.org/projects/codebyniki-web-page-creation",
-  challenge: "Frontend Developer Challenge 1: Web Page Creation"
-},
-  {title: "CodeByNiki: Login System",
-  link: "https://preprlabs.org/projects/codebyniki-login-system",
-  challenge: "Frontend Developer Challenge 2: Login System"
-},
-  {title: "CodeByNiki: Dashboard & Project Creation",
-  link: "https://preprlabs.org/projects/codebyniki-dashboard-project",
-  challenge: "Frontend Developer Challenge 3: Dashboard and Project Creation"
-},
-  {title: "CodeByNiki: Accessibility Integration",
-  link: "https://preprlabs.org/projects/codebyniki-accessibility-intg",
-  challenge: "Frontend Developer Challenge 4: Accessibility Integration"
-}
-]
-
 function Dashboard(props) {
 
   const [hide, setHide] = useState(true);
@@ -70,21 +50,34 @@ function Dashboard(props) {
 
           {/* New Project Button */}
           <div className="d-flex justify-content-end mb-3">
-            <Button className="newProjectBtn" variant="success" onClick={() => navigate("/newproject")}>Create a New Project</Button>
+            <Button className="newProjectBtn" variant="success" onClick={() => navigate("/newproject")}>New Project</Button>
           </div>
 
           <Row className="dashboardRow">
-
+        
             {/* Projects */}
-            <Col className="dashboardCol" sm={12} md={4}>
+            <Col className="dashboardCol" sm={12} md={6}>
               <div className="dashboardCard">
                   <h1 className="cardTitle text-center">Projects</h1>
                   <Tabs defaultActiveKey="projects"  className="tabsGroup mb-3">
                     <Tab className="cardTab" eventKey="projects" title="Projects">
                       <ListGroup className="listGroup list-group-flush">
-                        <ListGroupItem>Cras justo odio</ListGroupItem>
-                        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                        <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="prjTitle" href="https://preprlabs.org/projects/codebyniki-web-page-creation">CodeByNiki: Web Page Creation</a>
+                          <p className="prjChallenge">Frontend Developer Challenge 1: Web Page Creation</p>
+                        </ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="prjTitle" href="https://preprlabs.org/projects/codebyniki-login-system">CodeByNiki: Login System</a>
+                          <p className="prjChallenge">Frontend Developer Challenge 2: Login System</p>
+                        </ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="prjTitle" href="https://preprlabs.org/projects/codebyniki-dashboard-project">CodeByNiki: Dashboard &amp; Project Creation</a>
+                          <p className="prjChallenge">Frontend Developer Challenge 3: Dashboard and Project Creation</p>
+                        </ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="prjTitle" href="https://preprlabs.org/projects/codebyniki-accessibility-intg">CodeByNiki: Accessibility Integration</a>
+                          <p className="prjChallenge">Frontend Developer Challenge 4: Accessibility Integration</p>
+                        </ListGroupItem>
                       </ListGroup>
                     </Tab>
                     <Tab className="cardTab" eventKey="assess" title="Need to Assess">
@@ -102,15 +95,44 @@ function Dashboard(props) {
             </Col>
 
             {/* Challenges */}
-            <Col className="dashboardCol" sm={12} md={4}>
+            <Col className="dashboardCol" sm={12} md={6}>
               <div className="dashboardCard">
                   <h1 className="cardTitle text-center">Challenges</h1>
                   <Tabs defaultActiveKey="challenges"  className="tabsGroup mb-3">
                     <Tab className="cardTab" eventKey="challenges" title="Challenges">
                       <ListGroup className="listGroup list-group-flush">
-                        <ListGroupItem>Cras justo odio</ListGroupItem>
-                        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                        <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="chTitle" href="https://preprlabs.org/challengeManager/frontend-developer-challenge-1-web-page-creation">Frontend Developer Challenge 1: Web Page Creation</a>
+                          <p className="chInfo">
+                            Web Developer Career Lab &nbsp; &nbsp;
+                            <i class="far fa-calendar-alt"></i>&nbsp;January 31, 2022  &nbsp;  &nbsp; 
+                            <i class="fas fa-users"></i>&nbsp;44
+                          </p>
+                        </ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="chTitle" href="https://preprlabs.org/challengeManager/frontend-developer-challenge-2-login-system">Frontend Developer Challenge 2: Login System</a>
+                          <p className="chInfo">
+                            Web Developer Career Lab &nbsp; &nbsp;
+                            <i class="far fa-calendar-alt"></i>&nbsp;January 31, 2022  &nbsp;  &nbsp; 
+                            <i class="fas fa-users"></i>&nbsp;44
+                          </p>
+                        </ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="chTitle" href="https://preprlabs.org/challengeManager/frontend-developer-challenge-3-dashboard-and-project-creation">Frontend Developer Challenge 3: Dashboard and Project Creation</a>
+                          <p className="chInfo">
+                            Web Developer Career Lab &nbsp; &nbsp;
+                            <i class="far fa-calendar-alt"></i>&nbsp;January 31, 2022  &nbsp;  &nbsp; 
+                            <i class="fas fa-users"></i>&nbsp;44
+                          </p>
+                        </ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="chTitle" href="https://preprlabs.org/challengeManager/frontend-developer-challenge-4-accessibility-integration">Frontend Developer Challenge 4: Accessibility Integration</a>
+                          <p className="chInfo">
+                            Web Developer Career Lab &nbsp; &nbsp;
+                            <i class="far fa-calendar-alt"></i>&nbsp;January 31, 2022  &nbsp;  &nbsp; 
+                            <i class="fas fa-users"></i>&nbsp;44
+                          </p>
+                        </ListGroupItem>
                       </ListGroup>
                     </Tab>
                     <Tab className="cardTab" eventKey="invited" title="Invited">
@@ -127,16 +149,35 @@ function Dashboard(props) {
               </div>
             </Col>
 
+          </Row>
+
+          <Row className="dashboardRow">
+
             {/* Labs */}
-            <Col className="dashboardCol" sm={12} md={4}>
+            <Col className="dashboardCol" sm={12} md={6}>
               <div className="dashboardCard">
                   <h1 className="cardTitle text-center">Labs</h1>
                   <Tabs defaultActiveKey="labs"  className="tabsGroup mb-3">
                     <Tab className="cardTab" eventKey="labs" title="Labs">
                       <ListGroup className="listGroup list-group-flush">
-                        <ListGroupItem>Cras justo odio</ListGroupItem>
-                        <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                        <ListGroupItem>Vestibulum at eros</ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="labTitle" href="https://preprlabs.org/labs/web-developer-career-lab">Web Developer Career Lab</a>
+                          <p className="labInfo float-right">
+                            <i class="fas fa-users"></i>&nbsp;126
+                          </p>
+                        </ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="labTitle" href="https://preprlabs.org/labs/career-planning-lab">Career Planning Lab </a>
+                          <p className="labInfo float-right">
+                            <i class="fas fa-users"></i>&nbsp;243
+                          </p>
+                        </ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="labTitle" href="https://preprlabs.org/labs/fun-lab-winter-2021">FUN Lab - Winter 2021</a>
+                          <p className="labInfo float-right">
+                            <i class="fas fa-users"></i>&nbsp;96
+                          </p>
+                        </ListGroupItem>
                       </ListGroup>
                     </Tab>
                     <Tab className="cardTab" eventKey="invited" title="Invited">
@@ -147,22 +188,44 @@ function Dashboard(props) {
                   </Tabs>
               </div>
             </Col>
-          </Row>
-
-          <Row className="dashboardRow">
 
             {/* Inbox */}
 
-            <Col className="dashboardCol" sm={12} md={4}>
+            <Col className="dashboardCol" sm={12} md={6}>
                 <div className="dashboardCard">
-                    <h1 className="cardTitle text-center">Labs</h1>
+                    <h1 className="cardTitle text-center">Inbox</h1>
                     <Tabs defaultActiveKey="inbox"  className="tabsGroup mb-3">
                       <Tab className="cardTab" eventKey="inbox" title="Inbox">
-                        <ListGroup className="listGroup list-group-flush">
-                          <ListGroupItem>Cras justo odio</ListGroupItem>
-                          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-                          <ListGroupItem>Vestibulum at eros</ListGroupItem>
-                        </ListGroup>
+                      <ListGroup className="listGroup list-group-flush">
+                        <ListGroupItem>                       
+                          <a className="senderName" href=" ">Prepr</a>
+                          <p className="msgDetail">
+                            Hi everyone, We have nudged a few teams; times around a little for the sake of keeping presentations back to back, so check the schedules in...
+                          </p>
+                          <a className="seeMore float-right" href=" ">See More</a>
+                        </ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="senderName" href=" ">Prepr</a>
+                          <p className="msgDetail">
+                            Hi everyone, We have nudged a few teams; times around a little for the sake of keeping presentations back to back, so check the schedules in...
+                          </p>
+                          <a className="seeMore float-right" href=" ">See More</a>
+                        </ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="senderName" href=" ">Prepr</a>
+                          <p className="msgDetail">
+                            Hi everyone, We have nudged a few teams; times around a little for the sake of keeping presentations back to back, so check the schedules in...
+                          </p>
+                          <a className="seeMore float-right" href=" ">See More</a>
+                        </ListGroupItem>
+                        <ListGroupItem>                       
+                          <a className="senderName" href=" ">Prepr</a>
+                          <p className="msgDetail">
+                            Hi everyone, We have nudged a few teams; times around a little for the sake of keeping presentations back to back, so check the schedules in...
+                          </p>
+                          <a className="seeMore float-right" href=" ">See More</a>
+                        </ListGroupItem>
+                      </ListGroup>
                       </Tab>
                       <Tab className="cardTab" eventKey="friendrequests" title="Friend Requests">
                         <ListGroup className="listGroup list-group-flush">

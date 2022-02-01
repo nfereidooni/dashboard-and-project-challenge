@@ -11,6 +11,8 @@
 
 .userMenu {
     padding-left: 80px;
+    display: flex;
+    justify-content: end;
 }
 
 @media only screen and (max-width: 1093px) {
@@ -29,4 +31,3 @@
     display: inline-block;
     width: 25px;
 }
-  

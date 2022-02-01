@@ -4,6 +4,8 @@ import { Container, Navbar, Nav, NavDropdown, Image, Form, Button, FormControl }
 import userImage from "../assets/img/IMG_Niki.jpg"
 
 function Header() {
+  
+  let variant = "light"
 
 
   return (
@@ -11,8 +13,8 @@ function Header() {
       <Navbar className="Navbar-main"
         collapseOnSelect
         expand="lg"
-        bg="light"
-        variant="light"
+        bg={variant}
+        variant={variant}
         fixed="top"
       >
         <Container fluid>
