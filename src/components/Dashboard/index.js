@@ -67,17 +67,16 @@ function Dashboard(props) {
         {/* Dashboard */}
 
         <div className="dashboard">
-          <h1 className="gettingStarted-h1 text-center mt-5 mb-3">Dashboard</h1>
 
           {/* New Project Button */}
           <div className="d-flex justify-content-end mb-3">
             <Button className="newProjectBtn" variant="success" onClick={() => navigate("/newproject")}>Create a New Project</Button>
           </div>
 
-          <Row>
+          <Row className="dashboardRow">
 
             {/* Projects */}
-            <Col sm={12} md={4}>
+            <Col className="dashboardCol" sm={12} md={4}>
               <div className="dashboardCard">
                   <h1 className="cardTitle text-center">Projects</h1>
                   <Tabs defaultActiveKey="projects"  className="tabsGroup mb-3">
@@ -103,7 +102,7 @@ function Dashboard(props) {
             </Col>
 
             {/* Challenges */}
-            <Col sm={12} md={4}>
+            <Col className="dashboardCol" sm={12} md={4}>
               <div className="dashboardCard">
                   <h1 className="cardTitle text-center">Challenges</h1>
                   <Tabs defaultActiveKey="challenges"  className="tabsGroup mb-3">
@@ -129,7 +128,7 @@ function Dashboard(props) {
             </Col>
 
             {/* Labs */}
-            <Col sm={12} md={4}>
+            <Col className="dashboardCol" sm={12} md={4}>
               <div className="dashboardCard">
                   <h1 className="cardTitle text-center">Labs</h1>
                   <Tabs defaultActiveKey="labs"  className="tabsGroup mb-3">
@@ -149,11 +148,12 @@ function Dashboard(props) {
               </div>
             </Col>
           </Row>
-          <Row>
+
+          <Row className="dashboardRow">
 
             {/* Inbox */}
 
-            <Col sm={12} md={4}>
+            <Col className="dashboardCol" sm={12} md={4}>
                 <div className="dashboardCard">
                     <h1 className="cardTitle text-center">Labs</h1>
                     <Tabs defaultActiveKey="inbox"  className="tabsGroup mb-3">

@@ -64,11 +64,29 @@ a {
 
 /* Dashboard */
 
+.dashboard {
+    margin-top: 100px
+}
+
+.dashboardRow {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dashboardCol {
+    display: flex;
+    flex-direction: column;
+}
+
 .dashboardCard {
     border: 2px solid #d3d2d2;
     border-radius: 5px;
     width: 100%;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    height: 100%;
 }
 
 .cardTitle {
