@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dashboard-and-project-challenge/static/css/main.2a56316f.css",
+    "main.js": "/dashboard-and-project-challenge/static/js/main.906c03fc.js",
+    "static/js/787.9016b89a.chunk.js": "/dashboard-and-project-challenge/static/js/787.9016b89a.chunk.js",
+    "static/media/IMG_Niki.jpg": "/dashboard-and-project-challenge/static/media/IMG_Niki.5eeaf6b01671d75fa460.jpg",
+    "index.html": "/dashboard-and-project-challenge/index.html",
+    "main.2a56316f.css.map": "/dashboard-and-project-challenge/static/css/main.2a56316f.css.map",
+    "main.906c03fc.js.map": "/dashboard-and-project-challenge/static/js/main.906c03fc.js.map",
+    "787.9016b89a.chunk.js.map": "/dashboard-and-project-challenge/static/js/787.9016b89a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a56316f.css",
+    "static/js/main.906c03fc.js"
+  ]
+}
