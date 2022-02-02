@@ -41,7 +41,7 @@ function Header() {
                       <NavDropdown.Item href="#"><span className="icon"><i class="fas fa-cog"></i></span>Settings</NavDropdown.Item>
                   </NavDropdown>
               </Nav>
-              <Form className="searchBar d-flex">
+              <Form className="searchBar d-flex ml-auto">
                 <FormControl
                   type="search"
                   placeholder="Search Challenges, Labs, Projects and People"
@@ -50,7 +50,7 @@ function Header() {
                 />
                 <Button variant="outline-success"><i class="fa fa-search"></i></Button>
               </Form>
-              <Nav className="mt-1 mt-lg-0">
+              <Nav className="mt-1 mt-lg-0 d-flex ml-auto">
                   <NavDropdown className="userMenu" id="collapsible-nav-dropdown" title={<div style={{display: "inline-block"}}><Image src={userImage} width="40" roundedCircle/></div>}>
                       <NavDropdown.Item className="userMenuItem" href="#"><span className="icon"><i class="fas fa-user"></i></span>My Info</NavDropdown.Item>
                       <NavDropdown.Item className="userMenuItem" href="#"><span className="icon"><i class="fas fa-question-circle"></i></span>Help</NavDropdown.Item>
