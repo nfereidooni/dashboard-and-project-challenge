@@ -22,14 +22,15 @@ Additional Objectives:
 - Feel free to re-design these pages to showcase your creativity.
 
 ## Installation:
-Live Website: TBD
+Live Website: https://nfereidooni.github.io/dashboard-and-project-challenge/
 
 ## Packages
 - React-Bootstrap (https://react-bootstrap.github.io/)
 
 ## Screenshots
 
-![TBD]( )
+![Challenge Dashboard Page Screenshot](/src/components/assets/img/prepr_dashboard_screenshot.PNG)
+![Challenge Project Page Screenshot](/src/components/assets/img/prepr_project_screenshot.PNG)
 
 ## License:
 MIT LICENSE
